@@ -1,0 +1,124 @@
+/* Adjusting space */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #919191;
+	background-image: url(giphy.gif);
+	background-repeat: repeat;
+	margin: 0px;
+}
+
+.page-wrapper {
+  margin-top: 50px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  padding: 0px;
+  width: 80%;
+  text-align: left;
+  position: relative;
+  border-left: 1px solid #F1F1F1;
+  border-right: 1px solid #F1F1F1;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;  /* Adjusted to create three columns */
+  grid-template-rows: auto;  /* Adjusted to create five rows */
+  grid-template-areas: 
+  "intro intro intro"
+  "intro intro intro"
+  "sidebar main main"
+  "sidebar main main"
+}
+
+.main {
+  grid-area: main;
+  margin: 5px;
+  padding: 5px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.intro {
+  grid-area: intro;
+  text-align: center;
+}
+
+/* Adjusting Direct Styling */
+header {
+  font-size: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 0px;
+  border-bottom: 1px solid #a878f5;
+}
+
+header h1 {
+  margin-bottom: 0px;
+}
+
+header h2 {
+  margin-top: 0px;
+}
+
+.page-wrapper > .main {
+  border: 2px solid #ddd;
+}
+
+nav li:nth-child(odd) {
+  color: aqua;
+}
+
+.page-wrapper section:first-of-type {
+  color: purple;
+}
+
+a[title] {
+  color: #007BFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.intro, .main, .sidebar {
+  padding: 10px;
+}
+
+.sidebar .design-selection, .design-archives, .zen-resources  {
+  background-color: #a878f5; /* Style .design-selection if it's a descendant of .sidebar */
+  color: white;
+  border:3px solid #4c105e;
+  box-shadow: 0px 0px 5px 0px #a878f5;
+  padding-left: 8px;
+}
+
+footer {
+  border-top: 1px dotted #a878f5;
+  padding: 5px;
+  text-align: center;
+}
+
+#zen-summary {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#zen-preamble {
+  font-size: 1em;
+  font-weight: bold;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.sidebar h3 {
+  font-size: 16px;
+}
+
+.sidebar a {
+  font-size: 12px;
+  font-weight: bold;
+}
