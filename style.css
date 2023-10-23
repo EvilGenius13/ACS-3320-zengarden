@@ -3,10 +3,12 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10px;
-	color: #919191;
+  background-color: #333333;
+	color: #f4f4f4;
 	background-image: url(giphy.gif);
 	background-repeat: repeat;
 	margin: 0px;
+  line-height: 1.5;
 }
 
 .page-wrapper {
@@ -18,14 +20,12 @@ body {
   width: 80%;
   text-align: left;
   position: relative;
-  border-left: 1px solid #F1F1F1;
-  border-right: 1px solid #F1F1F1;
-  background-color: #ffffff;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  background-color: #e0e0e0;
+  box-shadow: 0px 0px 5px 0px #4c105e;
+  opacity: 0.9;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;  /* Adjusted to create three columns */
-  grid-template-rows: auto;  /* Adjusted to create five rows */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
   grid-template-areas: 
   "intro intro intro"
   "intro intro intro"
@@ -35,12 +35,14 @@ body {
 
 .main {
   grid-area: main;
-  margin: 5px;
-  padding: 5px;
+  border: 1px solid #a878f5;
+  background-color: #a878f5;;
+  font-size: 11px;
 }
 
 .sidebar {
   grid-area: sidebar;
+  background-color: #ffffff;
 }
 
 .intro {
@@ -54,18 +56,28 @@ header {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   padding: 0px;
   border-bottom: 1px solid #a878f5;
+  background-image: url(headergif.gif);
+	background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border-radius: 2px;
 }
 
 header h1 {
   margin-bottom: 0px;
+  color: #a878f5;
 }
 
 header h2 {
   margin-top: 0px;
+  color: #a878f5;
 }
 
 .page-wrapper > .main {
-  border: 2px solid #ddd;
+  color: #4c105e;
+  padding: 5px;
 }
 
 nav li:nth-child(odd) {
@@ -77,7 +89,7 @@ nav li:nth-child(odd) {
 }
 
 a[title] {
-  color: #007BFF;
+  color: #021af4;
 }
 
 * {
@@ -85,40 +97,109 @@ a[title] {
 }
 
 .intro, .main, .sidebar {
-  padding: 10px;
+  padding: 0px;
+  background-color: #d182f3
 }
 
 .sidebar .design-selection, .design-archives, .zen-resources  {
-  background-color: #a878f5; /* Style .design-selection if it's a descendant of .sidebar */
+  background-color: #a878f5;
   color: white;
-  border:3px solid #4c105e;
-  box-shadow: 0px 0px 5px 0px #a878f5;
+  border:1px solid #4c105e;
+  box-shadow: 0px 0px 5px 0px #4c105e;
   padding-left: 8px;
 }
 
 footer {
   border-top: 1px dotted #a878f5;
-  padding: 5px;
   text-align: center;
+  border-top-color: #4c105e;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 10px;
 }
 
 #zen-summary {
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: bold;
+  font-style: italic;
+  width: 40%;
+  margin: auto;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #4c105e;
+}
+
+#zen-summary p:last-child {
+  border-bottom: #4c105e dotted 1px;
+  margin-bottom: 5px;
+  padding-bottom: 15px;
+  font-size: 12px;
 }
 
 #zen-preamble {
-  font-size: 1em;
-  font-weight: bold;
-  width: 65%;
-  margin: 0 auto;
+  display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    font-size: 1.6em;
+    color:#4c105e;
+    text-align: justify;
+    margin: 10px 10px auto;
+}
+
+#zen-preamble h3 {
+  grid-column: span 3;
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 40px;
+}
+
+#zen-preamble p {
+  border: 2px solid #4c105e;
+  padding: 5px;
+  background-color: #a878f5;
 }
 
 .sidebar h3 {
   font-size: 16px;
+  color: #4c105e;
 }
 
 .sidebar a {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
+}
+
+.main {
+  background-color: #a878f5;
+  border:1px solid #4c105e;
+  font-size: 14px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: justify;
+}
+
+.main h3 {
+  font-size: 18px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.main p {
+  width: 90%;
+  margin: auto;
+}
+
+abbr {
+  color: #37083A;
+  font-weight: bolder;
+  cursor: help;
+}
+
+a {
+  cursor: pointer;
+  color: #021af4;
+  text-decoration: none;
 }
